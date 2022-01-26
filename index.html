@@ -10,7 +10,8 @@
             <h1>Flight Simulator</h1>
             <h2>Current Flight Status</h2>
             <p id = "flightStatus">Space shuttle ready for takeoff</p>
-            <h2>Shuttle Trajectory</h2>
+            <h2>Shuttle Position</h2>
+            <p id="spaceShuttlePosition">X:<span id='x'>0 </span>Y:<span id='y'>0</span></p>
         </div>
         <div style="text-align: center; height: 400px; width: 100%;" >
             <div style="text-align: center; display: inline-block;">
@@ -19,17 +20,18 @@
                 <h3>Astronaut Chat</h3>
                 <p>Houston, we are ready when you are!</p>
             </div>
-            <div id = "shuttleBackground" style = "position: relative;">
-                <img src = "LaunchCode_rocketline_white.png" height = "75" width = "75" id = "rocket"/>
+            <div id = "shuttleBackground" style = "position: static;">
+                <img src = "LaunchCode_rocketline_white.png" height = "75" width = "75" id = "rocket" style='top: 250px; position: relative;'/>
             </div>
             <div style = "text-align: center; display: inline-block;">
-                    <button>Up</button>
-                    <button>Down</button>
-                    <button>Right</button>
-                    <button>Left</button>
+                    <button onclick='moveRocket(this.innerHTML);'>Up</button>
+                    <button onclick='moveRocket(this.innerHTML);'>Down</button>
+                    <button onclick='moveRocket(this.innerHTML);'>Right</button>
+                    <button onclick='moveRocket(this.innerHTML);'>Left</button>
                     <h3>Space Shuttle Height</h3>
                     <p id="spaceShuttleHeight">0</p><p style = "display: inline-block;"> miles</p>
             </div>
+            
         </div>
         <div style="text-align: center;">
             <button id = "takeoff">Take off</button>
